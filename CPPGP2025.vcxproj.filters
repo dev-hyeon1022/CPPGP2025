@@ -13,10 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ZVector3">
+      <UniqueIdentifier>{e1003196-2fd2-4fe0-a362-0fa21739d228}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPPGP2025.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ZVector3.cpp">
+      <Filter>ZVector3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ZVector3.h">
+      <Filter>ZVector3</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

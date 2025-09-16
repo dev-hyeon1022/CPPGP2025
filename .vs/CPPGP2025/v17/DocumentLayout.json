@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\GameProgramming\\Direct3D\\CPPGP2025\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{720A081A-BEA1-45D5-8A4B-3F8612F4D2AE}|CPPGP2025.vcxproj|C:\\GameProgramming\\Direct3D\\CPPGP2025\\ZVector3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{720A081A-BEA1-45D5-8A4B-3F8612F4D2AE}|CPPGP2025.vcxproj|solutionrelative:ZVector3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{720A081A-BEA1-45D5-8A4B-3F8612F4D2AE}|CPPGP2025.vcxproj|C:\\GameProgramming\\Direct3D\\CPPGP2025\\ZVector3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{720A081A-BEA1-45D5-8A4B-3F8612F4D2AE}|CPPGP2025.vcxproj|solutionrelative:ZVector3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{720A081A-BEA1-45D5-8A4B-3F8612F4D2AE}|CPPGP2025.vcxproj|C:\\GameProgramming\\Direct3D\\CPPGP2025\\CPPGP2025.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{720A081A-BEA1-45D5-8A4B-3F8612F4D2AE}|CPPGP2025.vcxproj|solutionrelative:CPPGP2025.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,13 +30,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ZVector3.h",
+              "DocumentMoniker": "C:\\GameProgramming\\Direct3D\\CPPGP2025\\ZVector3.h",
+              "RelativeDocumentMoniker": "ZVector3.h",
+              "ToolTip": "C:\\GameProgramming\\Direct3D\\CPPGP2025\\ZVector3.h",
+              "RelativeToolTip": "ZVector3.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-16T05:05:41.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ZVector3.cpp",
+              "DocumentMoniker": "C:\\GameProgramming\\Direct3D\\CPPGP2025\\ZVector3.cpp",
+              "RelativeDocumentMoniker": "ZVector3.cpp",
+              "ToolTip": "C:\\GameProgramming\\Direct3D\\CPPGP2025\\ZVector3.cpp",
+              "RelativeToolTip": "ZVector3.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-16T05:05:37.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CPPGP2025.cpp",
               "DocumentMoniker": "C:\\GameProgramming\\Direct3D\\CPPGP2025\\CPPGP2025.cpp",
               "RelativeDocumentMoniker": "CPPGP2025.cpp",
               "ToolTip": "C:\\GameProgramming\\Direct3D\\CPPGP2025\\CPPGP2025.cpp",
               "RelativeToolTip": "CPPGP2025.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-14T10:12:50.416Z",
               "EditorCaption": ""
