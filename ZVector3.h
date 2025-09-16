@@ -1,9 +1,9 @@
 #pragma once
 
-// ZMatrix í´ë˜ìŠ¤ì˜ ì „ë°© ì„ ì–¸(Forward Declaration)
-// ZVector3.hëŠ” ZMatrixì˜ ì „ì²´ ì •ì˜ë¥¼ ì•Œ í•„ìš” ì—†ì´, í¬ì¸í„°ë‚˜ ì°¸ì¡°ë¡œë§Œ ì‚¬ìš©í•˜ë¯€ë¡œ
-// ì´ëŸ° í´ë˜ìŠ¤ê°€ ìˆë‹¤ëŠ” ì‚¬ì‹¤ë§Œ ì•Œë ¤ì£¼ë©´ ë©ë‹ˆë‹¤. (ìˆœí™˜ ì°¸ì¡° ë°©ì§€ ë° ì»´íŒŒì¼ ì†ë„ í–¥ìƒ)
-class ZMatrix;
+// ZMatrix Å¬·¡½ºÀÇ Àü¹æ ¼±¾ğ(Forward Declaration)
+// ZVector3.h´Â ZMatrixÀÇ ÀüÃ¼ Á¤ÀÇ¸¦ ¾Ë ÇÊ¿ä ¾øÀÌ, Æ÷ÀÎÅÍ³ª ÂüÁ¶·Î¸¸ »ç¿ëÇÏ¹Ç·Î
+// ÀÌ·± Å¬·¡½º°¡ ÀÖ´Ù´Â »ç½Ç¸¸ ¾Ë·ÁÁÖ¸é µË´Ï´Ù. (¼øÈ¯ ÂüÁ¶ ¹æÁö ¹× ÄÄÆÄÀÏ ¼Óµµ Çâ»ó)
+//class ZMatrix;
 
 class ZVector3
 {
@@ -11,28 +11,30 @@ public:
     float x, y, z;
 
 public:
-    // ìƒì„±ì ë° ì†Œë©¸ì
+    // »ı¼ºÀÚ ¹× ¼Ò¸êÀÚ
     ZVector3();
     ZVector3(float x, float y, float z);
     ZVector3(const ZVector3& rhs);
     ~ZVector3();
 
-    // ë©¤ë²„ í•¨ìˆ˜
+    // ¸â¹ö ÇÔ¼ö
     float Dot(const ZVector3& rhs) const;
     ZVector3 Scale(float k) const;
     float Length() const;
     ZVector3 Normalize() const;
-    ZVector3 Transform(const ZMatrix& matrix) const; // í–‰ë ¬ ë³€í™˜ í•¨ìˆ˜
+    //ZVector3 Transform(const ZMatrix& matrix) const; // Çà·Ä º¯È¯ ÇÔ¼ö
 
-    // ì •ì (static) í•¨ìˆ˜
+    // Á¤Àû(static) ÇÔ¼ö
     static ZVector3 Cross(const ZVector3& u, const ZVector3& v);
 
-    // ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
+    // ¿¬»êÀÚ ¿À¹ö·Îµù
     ZVector3 operator+(const ZVector3& rhs) const;
     ZVector3 operator-(const ZVector3& rhs) const;
     void operator=(const ZVector3& rhs);
-    ZVector3 operator*(const ZVector3& rhs) const; // ì„±ë¶„ë³„ ê³±ì…ˆ (Hadamard Product)
-    ZVector3 operator*(float k) const; // ìŠ¤ì¹¼ë¼ ê³±ì…ˆ
+    ZVector3 operator*(const ZVector3& rhs) const; // ¼ººĞº° °ö¼À (Hadamard Product)
+    ZVector3 operator*(float k) const; // ½ºÄ®¶ó °ö¼À
+
+    void PrintInfo();
 };
 
 

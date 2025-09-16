@@ -1,19 +1,20 @@
 #include "ZVector3.h"
 //#include "ZMatrix.h"
-#include <cmath> // sqrt, sin, cos í•¨ìˆ˜ë¥¼ ì‚¬ìš©
+#include <cmath> // sqrt, sin, cos ÇÔ¼ö¸¦ »ç¿ë
+#include <iostream>
+using namespace std;
 
 
+// »ı¼ºÀÚ ¹× ¼Ò¸êÀÚ
+ZVector3::ZVector3() : x(0.0f), y(0.0f), z(0.0f) { cout << "default Call!" << endl; }
 
-// ìƒì„±ì ë° ì†Œë©¸ì
-ZVector3::ZVector3() : x(0.0f), y(0.0f), z(0.0f) {}
+ZVector3::ZVector3(float x, float y, float z) : x(x), y(y), z(z) { cout << "float init Call!" << endl; }
 
-ZVector3::ZVector3(float x, float y, float z) : x(x), y(y), z(z) {}
-
-ZVector3::ZVector3(const ZVector3& rhs) : x(rhs.x), y(rhs.y), z(rhs.z) {}
+ZVector3::ZVector3(const ZVector3& rhs) : x(rhs.x), y(rhs.y), z(rhs.z) { cout << "Copy Call!" << endl; }
 
 ZVector3::~ZVector3() {}
 
-// ë©¤ë²„ í•¨ìˆ˜
+// ¸â¹ö ÇÔ¼ö
 float ZVector3::Dot(const ZVector3& rhs) const
 {
     return (this->x * rhs.x) + (this->y * rhs.y) + (this->z * rhs.z);
@@ -36,7 +37,7 @@ ZVector3 ZVector3::Normalize() const
     return ZVector3(this->x / len, this->y / len, this->z / len);
 }
 
-// ì •ì  í•¨ìˆ˜
+// Á¤Àû ÇÔ¼ö
 ZVector3 ZVector3::Cross(const ZVector3& u, const ZVector3& v)
 {
     float x = u.y * v.z - u.z * v.y;
@@ -45,7 +46,7 @@ ZVector3 ZVector3::Cross(const ZVector3& u, const ZVector3& v)
     return ZVector3(x, y, z);
 }
 
-// ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
+// ¿¬»êÀÚ ¿À¹ö·Îµù
 ZVector3 ZVector3::operator+(const ZVector3& rhs) const
 {
     return ZVector3(this->x + rhs.x, this->y + rhs.y, this->z + rhs.z);
@@ -63,26 +64,31 @@ void ZVector3::operator=(const ZVector3& rhs)
     this->z = rhs.z;
 }
 
-// ì„±ë¶„ë³„ ê³±ì…ˆ
+// ¼ººĞº° °ö¼À
 ZVector3 ZVector3::operator*(const ZVector3& rhs) const
 {
     return ZVector3(this->x * rhs.x, this->y * rhs.y, this->z * rhs.z);
 }
 
-// ìŠ¤ì¹¼ë¼ ê³±ì…ˆ
+// ½ºÄ®¶ó °ö¼À
 ZVector3 ZVector3::operator*(float k) const
 {
     return Scale(k);
 }
 
-// í–‰ë ¬ ë³€í™˜
+void ZVector3::PrintInfo()
+{
+    cout << "X: " << x << ", Y: " << y << ", Z: " << z << endl;
+}
+
+// Çà·Ä º¯È¯
 //ZVector3 ZVector3::Transform(const ZMatrix& matrix) const
 //{
-//    // D3D ê¸°ì¤€ (ë²¡í„° * í–‰ë ¬) ì´ë¯€ë¡œ ë™ì°¨ì¢Œí‘œ w=1ë¡œ ê³„ì‚°
+//    // D3D ±âÁØ (º¤ÅÍ * Çà·Ä) ÀÌ¹Ç·Î µ¿Â÷ÁÂÇ¥ w=1·Î °è»ê
 //    float newX = x * matrix.m[0][0] + y * matrix.m[1][0] + z * matrix.m[2][0] + 1.0f * matrix.m[3][0];
 //    float newY = x * matrix.m[0][1] + y * matrix.m[1][1] + z * matrix.m[2][1] + 1.0f * matrix.m[3][1];
 //    float newZ = x * matrix.m[0][2] + y * matrix.m[1][2] + z * matrix.m[2][2] + 1.0f * matrix.m[3][2];
-//    // w'ëŠ” ì •ê·œí™”ë¥¼ ìœ„í•´ ì‚¬ìš©ë˜ì§€ë§Œ, ì—¬ê¸°ì„œëŠ” ê°„ë‹¨íˆ 1ë¡œ ê°€ì •í•˜ê³  ìƒëµ
+//    // w'´Â Á¤±ÔÈ­¸¦ À§ÇØ »ç¿ëµÇÁö¸¸, ¿©±â¼­´Â °£´ÜÈ÷ 1·Î °¡Á¤ÇÏ°í »ı·«
 //    return ZVector3(newX, newY, newZ);
 //}
 
