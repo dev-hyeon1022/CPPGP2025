@@ -3,7 +3,7 @@
 // ZMatrix 클래스의 전방 선언(Forward Declaration)
 // ZVector3.h는 ZMatrix의 전체 정의를 알 필요 없이, 포인터나 참조로만 사용하므로
 // 이런 클래스가 있다는 사실만 알려주면 됩니다. (순환 참조 방지 및 컴파일 속도 향상)
-//class ZMatrix;
+class ZMatrix;
 
 class ZVector3
 {
@@ -22,7 +22,7 @@ public:
     ZVector3 Scale(float k) const;
     float Length() const;
     ZVector3 Normalize() const;
-    //ZVector3 Transform(const ZMatrix& matrix) const; // 행렬 변환 함수
+    ZVector3 Transform(const ZMatrix& matrix) const; // 행렬 변환 함수
 
     // 정적(static) 함수
     static ZVector3 Cross(const ZVector3& u, const ZVector3& v);

@@ -8,7 +8,7 @@ using namespace std;
 // 생성자 및 소멸자
 ZVector3::ZVector3() : x(0.0f), y(0.0f), z(0.0f) { cout << "default Call!" << endl; }
 
-ZVector3::ZVector3(float x, float y, float z) : x(x), y(y), z(z) { cout << "float init Call!" << endl; }
+ZVector3::ZVector3(float x, float y, float z) : x(x), y(y), z(z) { cout << "float Call!" << endl; }
 
 ZVector3::ZVector3(const ZVector3& rhs) : x(rhs.x), y(rhs.y), z(rhs.z) { cout << "Copy Call!" << endl; }
 
@@ -76,20 +76,12 @@ ZVector3 ZVector3::operator*(float k) const
     return Scale(k);
 }
 
+
 void ZVector3::PrintInfo()
 {
     cout << "X: " << x << ", Y: " << y << ", Z: " << z << endl;
 }
 
-// 행렬 변환
-//ZVector3 ZVector3::Transform(const ZMatrix& matrix) const
-//{
-//    // D3D 기준 (벡터 * 행렬) 이므로 동차좌표 w=1로 계산
-//    float newX = x * matrix.m[0][0] + y * matrix.m[1][0] + z * matrix.m[2][0] + 1.0f * matrix.m[3][0];
-//    float newY = x * matrix.m[0][1] + y * matrix.m[1][1] + z * matrix.m[2][1] + 1.0f * matrix.m[3][1];
-//    float newZ = x * matrix.m[0][2] + y * matrix.m[1][2] + z * matrix.m[2][2] + 1.0f * matrix.m[3][2];
-//    // w'는 정규화를 위해 사용되지만, 여기서는 간단히 1로 가정하고 생략
-//    return ZVector3(newX, newY, newZ);
-//}
+ 
 
 
