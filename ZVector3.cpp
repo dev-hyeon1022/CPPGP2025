@@ -76,12 +76,19 @@ ZVector3 ZVector3::operator*(float k) const
     return Scale(k);
 }
 
+// 행렬 변환
+//ZVector3 ZVector3::Transform(const ZMatrix& matrix) const
+//{
+//    // D3D 기준 (벡터 * 행렬) 이므로 동차좌표 w=1로 계산
+//    float newX = x * matrix.m[0][0] + y * matrix.m[1][0] + z * matrix.m[2][0] + 1.0f * matrix.m[3][0];
+//    float newY = x * matrix.m[0][1] + y * matrix.m[1][1] + z * matrix.m[2][1] + 1.0f * matrix.m[3][1];
+//    float newZ = x * matrix.m[0][2] + y * matrix.m[1][2] + z * matrix.m[2][2] + 1.0f * matrix.m[3][2];
+//    // w'는 정규화를 위해 사용되지만, 여기서는 간단히 1로 가정하고 생략
+//    return ZVector3(newX, newY, newZ);
+//}
+
 
 void ZVector3::PrintInfo()
 {
     cout << "X: " << x << ", Y: " << y << ", Z: " << z << endl;
-}
-
- 
-
-
+} 
