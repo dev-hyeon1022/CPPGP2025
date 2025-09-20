@@ -8,23 +8,27 @@ class ZMatrix;
 class ZVector3
 {
 public:
-    float x, y, z;
+    double x, y, z;
 
 public:
     // »ý¼ºÀÚ ¹× ¼Ò¸êÀÚ
     ZVector3();
-    ZVector3(float x, float y, float z);
+    ZVector3(double x, double y, double z);
     ZVector3(const ZVector3& rhs);
     ~ZVector3();
 
     // ¸â¹ö ÇÔ¼ö
-    float Dot(const ZVector3& rhs) const;
-    ZVector3 Scale(float k) const;
-    float Length() const;
+    double Dot(const ZVector3& rhs) const;
+    ZVector3 Cross(const ZVector3& rhs) const;
+    ZVector3 Scale(double k) const;
+    double Length() const;
+    double radBetween(const ZVector3& a, const ZVector3& b) const;
+    double degBetween(const ZVector3& a, const ZVector3& b) const;
     ZVector3 Normalize() const;
     ZVector3 Transform(const ZMatrix& matrix) const; // Çà·Ä º¯È¯ ÇÔ¼ö
 
     // Á¤Àû(static) ÇÔ¼ö
+    static double Dot(const ZVector3& u, const ZVector3& v); // ³»Àû (Á¤Àû ¸â¹ö ÇÔ¼ö)
     static ZVector3 Cross(const ZVector3& u, const ZVector3& v);
 
     // ¿¬»êÀÚ ¿À¹ö·Îµù
@@ -32,7 +36,7 @@ public:
     ZVector3 operator-(const ZVector3& rhs) const;
     void operator=(const ZVector3& rhs);
     ZVector3 operator*(const ZVector3& rhs) const; // ¼ººÐº° °ö¼À (Hadamard Product)
-    ZVector3 operator*(float k) const; // ½ºÄ®¶ó °ö¼À
+    ZVector3 operator*(double k) const; // ½ºÄ®¶ó °ö¼À
 
     void PrintInfo();
 };

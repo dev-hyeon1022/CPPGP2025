@@ -8,6 +8,9 @@
     <Filter Include="ZVector3">
       <UniqueIdentifier>{1418c528-34ef-4071-87d3-438ee60e5e7b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ZMatrix">
+      <UniqueIdentifier>{07c54f6a-ce18-459f-9c40-966225970c54}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPPGP2025.cpp">
@@ -16,10 +19,16 @@
     <ClCompile Include="ZVector3.cpp">
       <Filter>ZVector3</Filter>
     </ClCompile>
+    <ClCompile Include="ZMatrix.cpp">
+      <Filter>ZMatrix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ZVector3.h">
       <Filter>ZVector3</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMatrix.h">
+      <Filter>ZMatrix</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
