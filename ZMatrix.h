@@ -9,7 +9,7 @@ public:
 	ZMatrix(); // 단위행렬로 초기화
 	ZMatrix operator*(const ZMatrix& rhs) const;
 
-	static ZMatrix CreateSacle(double sx, double sy, double sz);
+	static ZMatrix CreateScale(double sx, double sy, double sz);
 	static ZMatrix CreateRotationX(double radians);
 	static ZMatrix CreateRotationY(double radians);
 	static ZMatrix CreateRotationZ(double radians);

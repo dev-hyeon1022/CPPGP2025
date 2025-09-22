@@ -12,7 +12,7 @@ ZMatrix::ZMatrix()
 	}
 }
 
-ZMatrix ZMatrix::CreateSacle(double sx, double sy, double sz)
+ZMatrix ZMatrix::CreateScale(double sx, double sy, double sz)
 {
 	ZMatrix mat;
 	mat.m[0][0] = sx;

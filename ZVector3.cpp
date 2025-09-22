@@ -1,7 +1,6 @@
 #include "ZVector3.h"
 #include "ZMatrix.h"
 #include <cmath> // sqrt, sin, cos 함수를 사용
-#include <iostream>
 using namespace std;
 
 #pragma region Static Function
@@ -85,7 +84,7 @@ double ZVector3::radBetween(const ZVector3& a, const ZVector3& b) const
 
 double ZVector3::degBetween(const ZVector3& a, const ZVector3& b) const
 {
-    return radBetween(a,b) * 180.0 / 3.141592;
+    return radBetween(a, b) * 180.0 / 3.141592;
 }
 
 ZVector3 ZVector3::Transform(const ZMatrix& matrix) const
@@ -131,9 +130,3 @@ ZVector3 ZVector3::operator*(double k) const
 }
 
 #pragma endregion
-
-
-void ZVector3::PrintInfo()
-{
-    cout << "X: " << x << ", Y: " << y << ", Z: " << z << endl;
-} 

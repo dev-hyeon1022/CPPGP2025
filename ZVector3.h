@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 // ZMatrix 클래스의 전방 선언(Forward Declaration)
 // ZVector3.h는 ZMatrix의 전체 정의를 알 필요 없이, 포인터나 참조로만 사용하므로
 // 이런 클래스가 있다는 사실만 알려주면 됩니다. (순환 참조 방지 및 컴파일 속도 향상)
@@ -38,7 +38,9 @@ public:
     ZVector3 operator*(const ZVector3& rhs) const; // 성분별 곱셈 (Hadamard Product)
     ZVector3 operator*(double k) const; // 스칼라 곱셈
 
-    void PrintInfo();
+    friend std::ostream& operator<<(std::ostream& os, const ZVector3& vec)
+    {
+        os << "ZVector3(" << vec.x << ", " << vec.y << ", " << vec.z << ")";
+        return os;
+    }
 };
-
-
