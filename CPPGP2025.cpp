@@ -124,6 +124,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLinw
     {
         if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
         {
+            if (WM_QUIT == msg.message)
+                break;
+
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
