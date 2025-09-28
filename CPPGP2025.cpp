@@ -3,6 +3,8 @@
 #include "ZVector3.h"
 #include "ZMatrix.h"
 #include "TitleState.h"
+#include "Bitmap.h"
+
 #include "CPPGP2025.h"
 
 #define WIN_NAME L"WinAPI State Pattern"
@@ -14,15 +16,27 @@ HINSTANCE g_hInstance = NULL;
 HWND g_hWnd = NULL;
 
 void MatrixTest();
-void ChangeState(GameState* newState);
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
     case WM_CREATE:
+
         timeBeginPeriod(1);
+
         break;
+    case WM_PAINT:
+    {
+        if (g_curState)
+        {
+            PAINTSTRUCT ps;
+            HDC hdc = BeginPaint(hWnd, &ps);
+            g_curState->Render(hdc);
+            EndPaint(hWnd, &ps);
+        }
+    }
+    break;
 
     case WM_DESTROY:
         PostQuitMessage(0);

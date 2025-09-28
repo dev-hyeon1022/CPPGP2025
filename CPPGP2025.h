@@ -1,4 +1,4 @@
 #pragma once
 
 class GameState;
-void ChanageState(GameState* newState);
+extern void ChangeState(GameState* newState);

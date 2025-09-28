@@ -25,6 +25,8 @@
       <Filter>main</Filter>
     </ClCompile>
     <ClCompile Include="TitleState.cpp" />
+    <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="PlayState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ZVector3.h">
@@ -40,5 +42,8 @@
       <Filter>GameState</Filter>
     </ClInclude>
     <ClInclude Include="TitleState.h" />
+    <ClInclude Include="MenuState.h" />
+    <ClInclude Include="PlayState.h" />
+    <ClInclude Include="Bitmap.h" />
   </ItemGroup>
 </Project>
